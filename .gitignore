@@ -29,3 +29,7 @@
 # Executables
 *.exe
 *.app
+*.out
+
+# Some random files
+git_commit_and_push.sh
