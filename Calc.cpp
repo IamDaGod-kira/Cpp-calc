@@ -8,17 +8,17 @@ Please share with every person u know in sololearn ! it always helps .....
 #include <cmath>
 using namespace std;
 
-#define owner "github.com/Pritam2958"
-
-struct { 
-      int num1; 
-      int num2; 
-      char op; 
-      } Mystruct;
+template <typename Type>
+struct MyStruct {
+    Type num1;
+    Type num2;
+    Type op;
+};
 
 class calc { 
     
     public : 
+    MyStruct<double> myStruct; 
     
  calc () { 
     cout << "Enter a number: \n" ;
@@ -50,54 +50,54 @@ class calc {
     cout << owner << endl; 
     }
     
-  void table (int num1 , int num2) { 
+  void table (Type num1 , Type num2) { 
       cout << "table of " << num1 << " till " << num2 << " is " << endl; 
-      for (int _2 = 1;_2 <= num2;_2++) {
+      for (Type _2 = 1;_2 <= num2;_2++) {
           cout << num1 << " x " << _2 << " = " << (num1*_2) << endl; 
           }
       } 
         
-  void expo (int x2 , int x3) { 
+  void expo (Type x2 , Type x3) { 
       cout << x2 << " to the power of " << x3 << " = " << pow(x2 , x3) << endl; 
       }
     
-  void add (int x , int y) { 
+  void add (Type x , Type y) { 
       cout << x << " + " << y << " = " << x + y << endl; 
       } 
       
-  void sub (int p , int q) { 
+  void sub (Type p , Type q) { 
       cout << p << " - " << q << " = " << p - q << endl; 
       } 
       
-  void mult (int t , int u) { 
+  void mult (Type t , Type u) { 
       cout << t << " * " << u << " = " << t * u << endl; 
       } 
       
-  void div (int m , int n) { 
+  void div (Type m , Type n) { 
       cout << m << " / " << n << " = " << m / n << endl; 
       cout << "Remainder = " << m % n << endl; 
       }
       
-  void sq2 (int _q) { 
+  void sq2 (Type _q) { 
       if (Mystruct.num1 > 0) {
       cout << "Square Root " << _q << " = " << sqrt(_q) << endl; 
       }
       } 
       
-  void divd (int _m , int _n) { 
+  void divd (Type _m , Type _n) { 
       cout << _m << " / " << _n << " in decimals = " << (float) _m / (float) _n << endl; 
       }
       
-  void fact (int w) { 
+  void fact (Type w) { 
       cout << "Factors of " << w << " are" << endl; 
-      for (int i = 1 ; i <= w ; i++) { 
+      for (Type i = 1 ; i <= w ; i++) { 
           if (w % i == 0) { 
               cout << i << " "; 
               } 
           } 
       }
       
-  void divs (int po , int sq) { 
+  void divs (Type po , Type sq) { 
       if (po % sq == 0) { 
           cout << sq << " is divisible by " << po << endl; 
           } 
@@ -195,7 +195,7 @@ int main()
             throw 97; 
             }
         } 
-    catch (int error) { 
+    catch (Type error) { 
         cout << "Something Went Wrong " << endl; 
         cout << "Error code : " << error << endl; 
         }
